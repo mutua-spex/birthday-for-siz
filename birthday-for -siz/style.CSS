@@ -1,0 +1,252 @@
+/* style.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffe6f0;
+  color: #444;
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.envelope {
+  width: 200px;
+  height: 120px;
+  background: pink;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.envelope p {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.binary-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  overflow: hidden;
+  z-index: 0;
+  animation: binaryRain 20s linear infinite;
+}
+
+#countdown-text {
+  font-size: 8rem;
+  color: #ffb6c1;
+  z-index: 2;
+  text-shadow: 0 0 10px #fff;
+}
+
+.binary-text {
+  font-size: 1rem;
+  color: #ff69b4;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.birthday-photo {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff69b4;
+  animation: zoomIn 2s ease forwards;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.hand {
+  font-size: 2rem;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: float 1.5s ease-in-out infinite;
+  color: #ff1493;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.top-message {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: #ff69b4;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.night-sky {
+  background: url('images/night-sky.gif') no-repeat center center;
+  background-size: cover;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.notebook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('https://i.imgur.com/IYw2Y7V.png');
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(255, 105, 180, 0.4);
+  width: 85%;
+  max-width: 600px;
+  height: 70vh;
+  overflow: auto;
+}
+
+.page {
+  display: none;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.page.active {
+  display: block;
+}
+
+.page img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+/* Moving Celebration Text */
+.moving-celebration-text {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff69b4;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 999;
+  text-align: center;
+  animation: moveBanner 12s linear infinite;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff69b4;
+}
+
+@keyframes moveBanner {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Floating Balloons */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 60px;
+  background: radial-gradient(circle, #ff69b4, #ff1493);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: floatUp 10s infinite ease-in;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #ff1493;
+}
+#binaryCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#countdown-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Glitter Background */
+.glitter-bg {
+  background: url('https://i.imgur.com/8Gz7vBM.gif') no-repeat center center;
+  background-size: cover;
+  animation: fadeIn 2s ease-in-out;
+}
+

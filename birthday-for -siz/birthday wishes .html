@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Sister praying for you for long life around the globe 💖</title>
+  <link rel="stylesheet" href="style.CSS" />
+</head>
+<body>
+  <!-- Folded Letter -->
+  <div id="letter-screen" class="screen">
+    <audio id="bg-music" src="happy.mp3" autoplay loop></audio>
+
+    <div class="envelope" onclick="openEnvelope()">
+      <p>💌 Tap to open your surprise</p>
+      <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+<div class="balloon" style="left: 30%; animation-delay: 3s;"></div>
+<div class="balloon" style="left: 50%; animation-delay: 1.5s;"></div>
+<div class="balloon" style="left: 70%; animation-delay: 4s;"></div>
+<div class="balloon" style="left: 90%; animation-delay: 2s;"></div>
+
+    </div>
+  </div>
+
+  <!-- Countdown with binary background -->
+  <div id="countdown-screen" class="screen hidden">
+  <canvas id="binaryCanvas"></canvas>
+  <div id="countdown-text">3</div>
+  <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+<div class="balloon" style="left: 30%; animation-delay: 3s;"></div>
+<div class="balloon" style="left: 50%; animation-delay: 1.5s;"></div>
+<div class="balloon" style="left: 70%; animation-delay: 4s;"></div>
+<div class="balloon" style="left: 90%; animation-delay: 2s;"></div>
+
+</div>
+  <!-- Birthday message with animated photo -->
+  <div id="photo-screen" class="screen hidden">
+    <img src="self.jpeg" alt="Birthday Girl" class="birthday-photo" />
+    <div class="hand" onclick="showNotebook()">🤚 Tap to open notebook</div>
+  <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+<div class="balloon" style="left: 30%; animation-delay: 3s;"></div>
+<div class="balloon" style="left: 50%; animation-delay: 1.5s;"></div>
+<div class="balloon" style="left: 70%; animation-delay: 4s;"></div>
+<div class="balloon" style="left: 90%; animation-delay: 2s;"></div>
+
+</div>
+
+  <!-- Notebook Pages -->
+  <div id="notebook-screen" class="screen hidden">
+    <div class="moving-celebration-text">
+  🎉 Happy Birthday Sis! Wishing you laughter, love & cake! 💖🎂🎈
+</div>
+
+    <div class="notebook">
+      <div class="page active" id="page1">
+        <h2>Page 1</h2>
+        <img src="self2.jpeg" alt="Her Photo" />
+        <button onclick="nextPage()">Next</button>
+      </div>
+      <div class="page" id="page2">
+        <p>Happy Birthday to the most beautiful soul I know 💖
+You’re not just my sister — you’re my safe space, my giggle partner, and my best friend forever. I’m so proud of the woman you are becoming. May this year overflow with joy and light! 🎂🌸✨🎂🎉</p>
+        <button onclick="nextPage()">Next</button>
+      </div>
+      <div class="page" id="page3">
+        <p>Every memory we’ve made together is a treasure in my heart 🎀
+From laughing over silly things to standing by each other through tough days — I wouldn’t trade a moment. Today is all about YOU, and you deserve the universe! 🌍🎉💕 🌸🎁</p>
+        <button onclick="nextPage()">Next</button>
+      </div>
+      <div class="page" id="page4">
+        <p>You’re not just growing older — you’re growing stronger, wiser, and even more stunning ✨
+Never doubt how much you mean to me. I’ll always be here — cheering you on, hugging you tight, and loving you endlessly. 🎈🎂💐🎈🍰</p>
+        <button onclick="nextPage()">Next</button>
+      </div>
+      <div class="page" id="page5">
+        <p>Here’s to cake, candles, and a billion sparkles of happiness 🕯️
+May all your dreams tiptoe into reality and may every day feel like magic. Happy Birthday, sis — you’re one in a million🌟💝🎊💐🎊</p>
+        <button onclick="nextPage()">Next</button>
+      </div>
+      <div class="page" id="page6">
+        <h2>Page 6</h2>
+        <img src="together.jpeg" alt="Together Photo" />
+      </div>
+    </div>
+  </div>
+
+  <script src="SCRIPT.js"></script>
+</body>
+</html>
